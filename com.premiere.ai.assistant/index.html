@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premiere AI Assistant</title>
+  <link rel="stylesheet" href="css/panel.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Premiere AI Assistant</h1>
+
+    <label>
+      Provider
+      <select id="provider">
+        <option value="openai">OpenAI (ChatGPT)</option>
+        <option value="anthropic">Anthropic (Claude)</option>
+        <option value="google">Google (Gemini / Veo)</option>
+        <option value="custom">Custom Endpoint</option>
+      </select>
+    </label>
+
+    <label>
+      Model
+      <input id="model" type="text" value="gpt-4o-mini" />
+    </label>
+
+    <label>
+      API Key
+      <input id="apiKey" type="password" placeholder="Paste key..." />
+    </label>
+
+    <label id="customUrlWrap" class="hidden">
+      Custom URL
+      <input id="customUrl" type="url" placeholder="https://api.example.com/v1/chat/completions" />
+    </label>
+
+    <label>
+      Prompt
+      <textarea id="prompt" rows="8" placeholder="Write your edit/script prompt..."></textarea>
+    </label>
+
+    <div class="actions">
+      <button id="sendBtn">Send to model</button>
+      <button id="insertMarkerBtn" class="secondary">Insert response as marker</button>
+    </div>
+
+    <section>
+      <h2>Response</h2>
+      <pre id="output"></pre>
+    </section>
+  </main>
+
+  <script src="js/lib/CSInterface.js"></script>
+  <script src="js/panel.js"></script>
+</body>
+</html>
