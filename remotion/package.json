@@ -1,0 +1,17 @@
+{
+  "name": "gemini-10s-remotion-ad",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts GeminiAd out/gemini-ad.mp4"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remotion": "4.0.274"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2"
+  }
+}
